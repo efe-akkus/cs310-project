@@ -12,9 +12,7 @@ A Flutter application for managing shared group expenses and balances.
 | --- | --- | --- |
 | Efe Çağan Akkuş | 32413 | Step 1 coordinator |
 | Emir Keskin | 31020 | Team member |
-| Yunus Emre Yolal | ID pending | Team member |
-
-Yunus Emre Yolal's student ID will be added when confirmed.
+| Yunus Emre Yolal | 31294 | Team member |
 
 ## Project overview
 

@@ -7,7 +7,7 @@
 | --- | --- | --- |
 | Efe Çağan Akkuş | 32413 | Step 1 coordinator |
 | Emir Keskin | 31020 | Team member |
-| Yunus Emre Yolal | ID pending | Team member |
+| Yunus Emre Yolal | 31294 | Team member |
 
 ## Project overview
 
