@@ -38,7 +38,7 @@ After the core workflow is reliable, optional extensions may include unequal spl
 
 ## Technical approach
 
-The planned stack is Flutter and Dart, with a local SQLite database. The interface, balance calculations and persistence logic will be kept separate so that each can be developed and checked independently. Planned screens are the group list, group overview, expense form, balance summary and settlement form.
+The planned stack is Flutter and Dart, with a local SQLite database. The interface, balance calculations and persistence logic will be kept separate so that each can be developed and checked independently. In Step 3, Provider will manage application state and update the interface when local records or balances change. Planned screens are the group list, group overview, expense form, balance summary and settlement form.
 
 ## Local data
 
@@ -50,13 +50,13 @@ Local records will include groups, members, expenses, expense participants and s
 - **Data consistency:** Validate positive amounts and valid member references; use database transactions for related changes and define safe deletion rules.
 - **Usability and teamwork:** Keep entry forms and balance labels clear. Agree on shared data models early and integrate changes in small commits.
 
-## Planned task assignments
+## Step 1 contributions and remaining tasks
 
-| Member | Planned responsibilities |
+| Member | Contribution / remaining task |
 | --- | --- |
-| Efe Çağan Akkuş | Coordinate Step 1, maintain the proposal and README, plan navigation and implement the group and expense interface. |
-| Emir Keskin | Design the local schema, implement data storage and retrieval, and verify persistence and input validation. |
-| Yunus Emre Yolal | Implement splitting and balance logic, build the settlement summary, and lead calculation and workflow tests. |
+| Efe Çağan Akkuş | Prepared all Step 1 sections: overview, features, data and challenges; prepared the proposal, README and GitHub setup. Coordinates Step 1 and TA communication. |
+| Emir Keskin | Planned before submission: review the feature scope and local data requirements. Review is not yet confirmed complete. |
+| Yunus Emre Yolal | Planned before submission: review the balance workflow, challenges and proposal clarity. Review is not yet confirmed complete. |
 
 All members will review changes, integrate their work and contribute to the final demonstration.
 
