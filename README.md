@@ -11,10 +11,10 @@ A Flutter application for managing shared group expenses and balances.
 | Member | Student ID | Coordination |
 | --- | --- | --- |
 | Efe Çağan Akkuş | 32413 | Step 1 coordinator |
-| Emir Keskin | 31020 | Step 2 coordinator not yet selected |
-| Yunus Emre Yolal | 31294 | Step 2 coordinator not yet selected |
+| Emir Keskin | 31020 | Team member |
+| Yunus Emre Yolal | 31294 | Step 2 coordinator |
 
-Step 2 will have a different coordinator; the choice between Emir and Yunus Emre is pending.
+Yunus Emre Yolal is the Step 2 coordinator, responsible for organizing meetings, coordinating task assignments and communicating with the assigned TA.
 
 ## Current product scope
 
@@ -54,7 +54,8 @@ Unequal splits, expense categories, search/filtering, CSV export and dark mode r
 
 - [x] Step 1 proposal and repository setup documented.
 - [x] Step 2.1 wireframe draft prepared; shared-group and profile scope documented.
-- [ ] Select Step 2 coordinator and confirm all members' GitHub access.
+- [x] Select Step 2 coordinator: Yunus Emre Yolal (31294).
+- [ ] Confirm all members' GitHub access.
 - [ ] Finalize visual design and obtain TA feedback on the updated scope and screens.
 - [ ] Submit `CS310_Group31_Step2.1.pdf` by **8 November 2026, 23:59 (Europe/Istanbul)**.
 - [ ] Implement reviewed screens with working navigation and the required UI components.

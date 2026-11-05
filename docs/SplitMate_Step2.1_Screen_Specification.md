@@ -2,6 +2,8 @@
 
 Group 31 | 2 November 2026
 
+Step 2 coordinator: Yunus Emre Yolal (31294); confirmed 5 November 2026.
+
 Account-based shared groups; Firebase implementation planned for Step 3. Step 2 uses mock data.
 
 ## S01 Log in

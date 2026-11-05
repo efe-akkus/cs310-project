@@ -84,9 +84,13 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 - İlk sürümde para birimi dönüşümü.
 - Eşit olmayan paylaşım, kategoriler, arama/filtreleme, CSV ve dark mode: çekirdek akıştan sonra değerlendirilecek opsiyonlar.
 
-## Açık işler
+## 11. Step 2 koordinasyonu
 
-- [ ] Step 2 koordinatörünü seç: Emir veya Yunus Emre (Step 1 koordinatörü Efe idi).
+**Karar (5 Kasım 2026):** Step 2 koordinatörü Yunus Emre Yolal (31294). Toplantıların düzenlenmesi, görev dağılımının koordinasyonu ve atanmış TA ile iletişim onun sorumluluğunda. Her üye kendi katkılarını kendi GitHub hesabından yapmaya devam edecek.
+
+## Takip listesi
+
+- [x] Step 2 koordinatörü: Yunus Emre Yolal (31294). Step 1 koordinatörü Efe idi.
 - [ ] TA'ya güncel kapsamı ve wireframe'leri göster; geri bildirimi kaydet.
 - [ ] Masraf düzenleme/silme, ödeme düzeltme, gruptan ayrılma/üye çıkarma ve davet yetkilerini kesinleştir.
 - [ ] IBAN'ın para birimiyle uyumu ve desteklenen ülkeleri netleştir.
