@@ -1,6 +1,6 @@
 # SplitMate - Tasarım Kararları
 
-Grup 31 · Son güncelleme: 5 Kasım 2026
+Grup 31 · Son güncelleme: 6 Kasım 2026
 
 Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinleşmeyen noktaları takip eder. Kararlaştırılmış davranış, uygulanmış özellik anlamına gelmez. Şu anda Step 2.1 wireframe aşamasındayız; Flutter uygulaması ve Firebase entegrasyonu henüz yapılmadı.
 
@@ -10,7 +10,7 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 
 **Gerekçe:** Her kullanıcının kendi profilinin olması ve grup masraflarını kendi hesabından takip edebilmesi istendi.
 
-**Sonuç:** Önceki Step 1 proposal tarihsel belge olarak korunur. Güncel ürün kapsamı bu dosya, README ve Step 2.1 v2 wireframe'lerinde açıklanır. Kapsam değişikliğinin TA ile görüşüldüğü/onaylandığı henüz doğrulanmadı.
+**Sonuç:** Önceki Step 1 proposal tarihsel belge olarak korunur. Güncel ürün kapsamı bu dosya, README ve Step 2.1 v3 wireframe'lerinde açıklanır. Kapsam değişikliğinin TA ile görüşüldüğü/onaylandığı henüz doğrulanmadı.
 
 ## 2. Giriş ve basit profil
 
@@ -73,9 +73,9 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 
 ## 9. Ekran seti ve görsel tasarım
 
-**Karar:** Güncel wireframe v2, 14 ekranı kapsar: giriş, kayıt, gruplarım, grup oluşturma, grup özeti, masraf ekle/düzenle, masraf detayı, bakiyeler, ödeme kaydı, üyeler, profil, profil düzenleme, gruba katılma ve davet.
+**Karar:** Güncel wireframe v3, 10 ana ekranı kapsar: giriş, kayıt, gruplarım, grup oluşturma, grup özeti, masraf ekle/düzenle, bakiyeler, üyeler, profil ve gruba katılma. Masraf detayı, ödeme kaydı, profil düzenleme ve davet kodu ilgili ekranların üzerinde açılan panellerdir.
 
-**Durum:** 9 sayfalık İngilizce taslak hazır. Gri tonlu wireframe yerleşimi mevcut; son renk paleti, font ve görsel stil henüz seçilmedi. Önce akış, sonra ana ekranların görsel dili, ardından diğer ekranlar netleştirilecek. UI uygulaması öncesinde TA geri bildirimi alınacak.
+**Durum:** 7 sayfalık İngilizce taslak hazır. Gri tonlu wireframe yerleşimi mevcut; son renk paleti, font ve görsel stil henüz seçilmedi. Önce akış, sonra ana ekranların görsel dili, ardından diğer ekranlar netleştirilecek. UI uygulaması öncesinde TA geri bildirimi alınacak.
 
 ## 10. Kapsam dışında / ertelenenler
 
