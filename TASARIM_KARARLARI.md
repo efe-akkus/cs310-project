@@ -1,6 +1,6 @@
 # SplitMate - Tasarım Kararları
 
-Grup 31 · Son güncelleme: 6 Kasım 2026
+Grup 31 · Son güncelleme: 7 Kasım 2026
 
 Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinleşmeyen noktaları takip eder. Kararlaştırılmış davranış, uygulanmış özellik anlamına gelmez. Şu anda Step 2.1 wireframe aşamasındayız; Flutter uygulaması ve Firebase entegrasyonu henüz yapılmadı.
 
@@ -10,7 +10,7 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 
 **Gerekçe:** Her kullanıcının kendi profilinin olması ve grup masraflarını kendi hesabından takip edebilmesi istendi.
 
-**Sonuç:** Önceki Step 1 proposal tarihsel belge olarak korunur. Güncel ürün kapsamı bu dosya, README ve Step 2.1 v3 wireframe'lerinde açıklanır. Kapsam değişikliğinin TA ile görüşüldüğü/onaylandığı henüz doğrulanmadı.
+**Sonuç:** Önceki Step 1 proposal tarihsel belge olarak korunur. Güncel ürün kapsamı bu dosya, README ve Step 2.1 v3 wireframe'lerinde açıklanır. Kullanıcı 7 Kasım 2026 tarihinde TA’nın kapsam değişikliğini onayladığını doğruladı; ekran tasarımlarının son incelemesi ayrıca yapılacak.
 
 ## 2. Giriş ve basit profil
 
@@ -75,7 +75,7 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 
 **Karar:** Güncel wireframe v3, 10 ana ekranı kapsar: giriş, kayıt, gruplarım, grup oluşturma, grup özeti, masraf ekle/düzenle, bakiyeler, üyeler, profil ve gruba katılma. Masraf detayı, ödeme kaydı, profil düzenleme ve davet kodu ilgili ekranların üzerinde açılan panellerdir.
 
-**Durum:** 7 sayfalık İngilizce taslak hazır. Gri tonlu wireframe yerleşimi mevcut; son renk paleti, font ve görsel stil henüz seçilmedi. Önce akış, sonra ana ekranların görsel dili, ardından diğer ekranlar netleştirilecek. UI uygulaması öncesinde TA geri bildirimi alınacak.
+**Durum:** 10 sayfalık İngilizce pre-submission taslak hazır. Beyaz zemin, koyu yeşil vurgu ve sade yerleşim kullanılıyor. 10 ana ekrana ek olarak dört panel çizimi ve hata/onay örnekleri mevcut. Son PDF incelemesi bekleniyor; UI uygulaması öncesinde ekranlar için TA geri bildirimi alınacak.
 
 ## 10. Kapsam dışında / ertelenenler
 
@@ -91,7 +91,8 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 ## Takip listesi
 
 - [x] Step 2 koordinatörü: Yunus Emre Yolal (31294). Step 1 koordinatörü Efe idi.
-- [ ] TA'ya güncel kapsamı ve wireframe'leri göster; geri bildirimi kaydet.
+- [x] Güncel kapsam için TA onayı alındı (kullanıcı teyidi: 7 Kasım 2026).
+- [ ] Ekran tasarımlarını TA ile incele; geri bildirimi kaydet.
 - [ ] Masraf düzenleme/silme, ödeme düzeltme, gruptan ayrılma/üye çıkarma ve davet yetkilerini kesinleştir.
 - [ ] IBAN'ın para birimiyle uyumu ve desteklenen ülkeleri netleştir.
 - [ ] Görsel tasarımın renk, font ve bileşenlerini seç.

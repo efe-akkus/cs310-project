@@ -1,4 +1,4 @@
-# SplitMate - Step 2.1 wireframes v3
+# SplitMate - Step 2.1 pre-submission design draft
 
 Group 31 | 6 November 2026
 
@@ -91,3 +91,7 @@ Show inline errors and confirm valid submissions before saving. Offer Create / J
 ### Step 2 / Step 3 boundary
 
 Use mock data for the Step 2 UI. Connect Firebase in Step 3, with member-only group access and owner-only profile editing. Recalculate balances from expenses and settlement records.
+
+## Visual design update - 7 November 2026
+
+The 10-page PDF draws the four contextual panels and includes inline-validation and confirmation examples. There are still 10 main screens. The TA approved the account/shared-group scope, as confirmed by the group; final screen review remains pending.
