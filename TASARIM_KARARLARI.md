@@ -75,7 +75,7 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 
 **Karar:** Güncel wireframe v3, 10 ana ekranı kapsar: giriş, kayıt, gruplarım, grup oluşturma, grup özeti, masraf ekle/düzenle, bakiyeler, üyeler, profil ve gruba katılma. Masraf detayı, ödeme kaydı, profil düzenleme ve davet kodu ilgili ekranların üzerinde açılan panellerdir.
 
-**Durum:** 10 sayfalık İngilizce pre-submission taslak hazır. Beyaz zemin, koyu yeşil vurgu ve sade yerleşim kullanılıyor. 10 ana ekrana ek olarak dört panel çizimi ve hata/onay örnekleri mevcut. Son PDF incelemesi bekleniyor; UI uygulaması öncesinde ekranlar için TA geri bildirimi alınacak.
+**Durum:** 9 sayfalık İngilizce pre-submission taslak hazır. Beyaz zemin, koyu yeşil vurgu ve sade yerleşim kullanılıyor. 10 ana ekrana ek olarak dört panel çizimi ve hata/onay örnekleri mevcut. Son PDF incelemesi bekleniyor; UI uygulaması öncesinde ekranlar için TA geri bildirimi alınacak.
 
 ## 10. Kapsam dışında / ertelenenler
 
@@ -105,3 +105,7 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 - [Güncel wireframe PDF](docs/CS310_Group31_Step2.1.pdf)
 - [Ekran açıklamaları ve akışlar](docs/SplitMate_Step2.1_Screen_Specification.md)
 - [Step 1 proposal - tarihsel kapsam](docs/CS310_SplitMate_Group31_Step1_Proposal.pdf)
+
+## Son PDF düzenlemesi
+
+Step 2.1 PDF yalnızca ekranlar, paneller, gezinme akışı, kısa açıklamalar ve hata/onay örneklerini içerir (9 sayfa). Teknik geliştirme notları çıkarıldı. Örnek e-posta: efe.akkus@sabanciuniv.edu. İsimlerde köşeli parantezli baş harfler kaldırıldı; masraf formlarında yuvarlak tikli çoklu seçim göstergeleri kullanıldı.

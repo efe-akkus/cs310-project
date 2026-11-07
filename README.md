@@ -4,7 +4,7 @@ A Flutter application for managing shared group expenses and balances.
 
 **CS310 | Group 31 | Current stage: Step 2.1 wireframes**
 
-> Status: pre-submission design draft with 10 main screens, four drawn panels, and validation/confirmation examples (10 PDF pages). The TA has approved the scope change to accounts and shared groups, as confirmed by the group. Final PDF review is pending. A Flutter starter project is present in `cs310_project/`; SplitMate UI and Firebase integration are not implemented.
+> Status: pre-submission design draft with 10 main screens, four drawn panels, and validation/confirmation examples (9 PDF pages). The TA has approved the scope change to accounts and shared groups, as confirmed by the group. Final PDF review is pending. A Flutter starter project is present in `cs310_project/`; SplitMate UI and Firebase integration are not implemented.
 
 ## Team
 
@@ -47,7 +47,7 @@ Unequal splits, expense categories, search/filtering, CSV export and dark mode r
 ## Design documentation
 
 - [Tasarım Kararları - decisions, reasons and open questions (Turkish)](TASARIM_KARARLARI.md)
-- [Step 2.1 pre-submission draft - 10 screens + 4 panels, 10 pages](docs/CS310_Group31_Step2.1.pdf)
+- [Step 2.1 pre-submission draft - 10 screens + 4 panels, 9 pages](docs/CS310_Group31_Step2.1.pdf)
 - [Screen descriptions and navigation (English)](docs/SplitMate_Step2.1_Screen_Specification.md)
 
 ## Submission checklist
