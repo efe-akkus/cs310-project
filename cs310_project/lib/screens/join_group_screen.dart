@@ -33,6 +33,8 @@ class _JoinGroupScreenState extends State<JoinGroupScreen> {
           const SizedBox(height: 24),
           Form(
             key: form,
+            // Check again while typing, so the error goes away after a fix.
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             child: TextFormField(
               controller: code,
               textCapitalization: TextCapitalization.characters,
@@ -68,7 +70,8 @@ class _JoinGroupScreenState extends State<JoinGroupScreen> {
                 leading: const Icon(Icons.group_outlined),
                 title: Text(found!.name),
                 subtitle: Text(
-                  'Owner: ${found!.members[found!.owner]}\n${found!.members.length} members · ${found!.currency}',
+                  'Owner: ${found!.members[found!.owner]}\n'
+                  '${found!.members.length} ${found!.members.length == 1 ? 'member' : 'members'} · ${found!.currency}',
                 ),
               ),
             ),

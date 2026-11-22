@@ -22,7 +22,9 @@ class GroupMembersView extends StatelessWidget {
           ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
-        Text('${g.members.length} joined members'),
+        Text(
+          '${g.members.length} joined ${g.members.length == 1 ? 'member' : 'members'}',
+        ),
         const SizedBox(height: 24),
         for (final m in g.members.entries)
           Card(

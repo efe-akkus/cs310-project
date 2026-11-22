@@ -67,6 +67,9 @@ class GroupsScreen extends StatelessWidget {
             ),
           for (final g in app.myGroups)
             Card(
+              // The order changes when a group is favorited, so each card
+              // gets a key and Flutter does not mix the cards up.
+              key: ValueKey(g.id),
               child: ListTile(
                 contentPadding: const EdgeInsets.all(16),
                 onTap: () => Navigator.push(
@@ -87,7 +90,8 @@ class GroupsScreen extends StatelessWidget {
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 subtitle: Text(
-                  '${g.members.length} members · ${g.currency}\nTotal ${money(g.total, g.currency)}',
+                  '${g.members.length} ${g.members.length == 1 ? 'member' : 'members'} · ${g.currency}\n'
+                  'Total ${money(g.total, g.currency)}',
                 ),
                 isThreeLine: true,
                 trailing: IconButton(

@@ -20,6 +20,29 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
     super.dispose();
   }
 
+  Future<void> create() async {
+    if (!form.currentState!.validate()) return;
+    final ok = await confirm(
+      context,
+      'Create this group?',
+      '${name.text.trim()} · $currency',
+      action: 'Create group',
+    );
+    if (!ok || !mounted) return;
+    try {
+      final g = AppScope.of(context).createGroup(name.text, currency);
+      // Open the new group and show its invite code right away.
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute<void>(
+          builder: (_) => GroupScreen(group: g, showInvite: true),
+        ),
+      );
+    } on StateError catch (e) {
+      toast(context, e.message);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final app = AppScope.of(context);
@@ -31,6 +54,8 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
           const SizedBox(height: 24),
           Form(
             key: form,
+            // Check again while typing, so the error goes away after a fix.
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             child: Column(
               children: [
                 TextFormField(
@@ -57,7 +82,8 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
           const SectionLabel('Group owner'),
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: Avatar(app.name),
+            // Same avatar as in the member list (photo if the user added one).
+            leading: Avatar(app.name, url: app.profile['photo'] ?? ''),
             title: Text(app.name),
             subtitle: const Text('You will join automatically.'),
           ),
@@ -66,28 +92,7 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
             'Invite your friends with a code after creating the group.',
           ),
           const SizedBox(height: 24),
-          PrimaryAction(
-            'Create group',
-            onPressed: () async {
-              if (!form.currentState!.validate()) return;
-              if (!await confirm(
-                context,
-                'Create this group?',
-                '${name.text.trim()} · $currency',
-                action: 'Create group',
-              )) {
-                return;
-              }
-              if (!context.mounted) return;
-              final g = app.createGroup(name.text, currency);
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute<void>(
-                  builder: (_) => GroupScreen(group: g, showInvite: true),
-                ),
-              );
-            },
-          ),
+          PrimaryAction('Create group', onPressed: create),
         ],
       ),
     );
