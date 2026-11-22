@@ -43,19 +43,17 @@ flutter test
 flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_flow_test.dart -d <simulator-id>
 ```
 
-Tests cover currency parsing, rounding, excluded payers, edits/deletions/partial settlements, invite membership, IBAN validation and local persistence. Widget tests exercise light/dark layouts at 320x568 and 430x932, including keyboard insets. The native integration test navigates the app and writes labeled screenshots into the ignored `screenshots/` directory. Screenshot tests use fresh sample state and do not modify stored user preview data.
+All 56 unit/widget tests pass. They cover currency parsing, rounding, excluded payers, edits/deletions/partial settlements, full repayment and duplicate-payment rejection, invite membership, IBAN validation, profile updates across groups and local persistence. Widget tests exercise light/dark layouts at 320x568 and 430x932, including keyboard insets. The native integration test navigates the app and writes labeled screenshots into the ignored `screenshots/` directory. Screenshot tests use fresh sample state and do not modify stored user preview data.
 
-## Team and handoff
+## Team and member contributions
 
-| Member | ID | Role |
+| Member | ID | Team-confirmed implementation responsibility |
 | --- | --- | --- |
-| Efe Çağan Akkuş | 32413 | Step 1 coordinator; auth/profile/appearance follow-up |
-| Emir Keskin | 31020 | Flutter starter setup; group-management follow-up |
-| Yunus Emre Yolal | 31294 | Step 2 coordinator; expenses/balances/map follow-up |
+| Efe Çağan Akkuş | 32413 | Login, registration, profile, theme; AI-assisted baseline, integration and final tests |
+| Emir Keskin | 31020 | Flutter starter, groups, create/join, members, invitations and group tests |
+| Yunus Emre Yolal | 31294 | Step 2 coordination, expenses, balances, payments and map |
 
-The follow-up assignments are planned work, not a claim that each member already implemented those screens. The initial UI baseline was created with Codex assistance at Efe's request. Each member must review, understand and make their own meaningful changes through their own GitHub account before the final contributions table is written.
-
-See [screen assignments](../docs/STEP2_2_EKIP_GOREVLERI.md). Source files are separated by screen to support independent edits.
+Yunus's work was committed through Efe's account. This table describes the team's confirmed screen work, not separate GitHub authorship. The UI baseline and test/report preparation used Codex assistance. Each member should be able to explain their work at the TA meeting. See [contribution details](../docs/STEP2_2_EKIP_GOREVLERI.md).
 
 ## Structure
 
@@ -73,4 +71,6 @@ See [screen assignments](../docs/STEP2_2_EKIP_GOREVLERI.md). Source files are se
 
 ## Submission
 
-The team reports an extension to **22 November 2026, 23:59 (Europe/Istanbul)**. After members finish their edits, rerun checks, refresh screenshots and record the actual final commit ID. The Step 2.2 report must include the public repository link, deadline commit ID, labeled core-screen screenshots and actual Member Contributions.
+Prepared for the team-reported extended deadline: **22 November 2026, 23:59 (Europe/Istanbul)**. Submit one group PDF named `CS310_Group31_Step2.2.pdf` through SUCourse. The PDF contains the public repository link, the full submitted code commit ID, labeled core-screen screenshots and Member Contributions. Runnable source stays in this public repository. APKs, screenshot ZIPs and the Step 2.1 PDF are not separate required Step 2.2 uploads in the specification.
+
+See the [final submission checklist](../docs/STEP2_2_SUBMISSION.md).

@@ -14,6 +14,14 @@ void main() {
     final app = AppState();
     await tester.pumpWidget(SplitMateApp(state: app));
     Future<void> shot(String name) async {
+      // Let real network image requests finish before capturing the screen.
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(seconds: 2)),
+      );
+      final messenger = find.byType(ScaffoldMessenger).first;
+      if (messenger.evaluate().isNotEmpty) {
+        tester.state<ScaffoldMessengerState>(messenger).clearSnackBars();
+      }
       await tester.pumpAndSettle(const Duration(milliseconds: 200));
       await binding.takeScreenshot(name);
       expect(tester.takeException(), isNull);
@@ -71,6 +79,8 @@ void main() {
     await tap('Weekend trip');
     await shot('05_group_overview');
     await tap('Add expense');
+    await tap('Save expense');
+    await shot('18_inline_validation');
     await tester.enterText(find.byType(TextFormField).at(0), 'Groceries');
     await tester.enterText(find.byType(TextFormField).at(1), '120.00');
     FocusManager.instance.primaryFocus?.unfocus();
@@ -127,5 +137,11 @@ void main() {
     await tap('Record payment');
     await tap('Record payment');
     expect(g.settlements.isNotEmpty, true);
+    await tap('Expenses');
+    await tap('Groceries');
+    await tap('Delete expense');
+    await shot('19_delete_confirmation');
+    await tap('Delete expense');
+    expect(g.expenses.any((e) => e.description == 'Groceries'), false);
   });
 }

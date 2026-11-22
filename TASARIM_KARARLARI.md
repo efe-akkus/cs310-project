@@ -115,3 +115,12 @@ Step 2.1 PDF yalnızca ekranlar, paneller, gezinme akışı, kısa açıklamalar
 Koyu tema, profil düzenlemesi ve harcamaya haritadan konum ekleme uygulanmıştır. Gruplarda favorileme de vardır. Veriler cihazda saklanan demo verileridir; gerçek Firebase hesap/üyelik güvenliği ve cihazlar arası senkronizasyon yoktur. OCR ertelenmiştir. Profil fotoğrafı bu sürümde HTTPS URL ile eklenir.
 
 Ekranlar üç üyeye sonraki inceleme/düzenleme için paylaştırıldı: Efe giriş/kayıt/profil/tema; Emir grup yönetimi ve davet; Yunus masraflar/bakiyeler/ödeme/harita. Bu dağılım tamamlanmış kişisel katkı olarak sunulmaz. Ayrıntılar `docs/STEP2_2_EKIP_GOREVLERI.md` içindedir.
+
+
+## 22 Kasım 2026 - Step 2.2 teslim durumu
+
+- Giriş/kayıt/profil/tema: Efe; grup işlemleri/üyeler/davet: Emir; masraf/bakiye/ödeme/harita: Yunus (ekip teyidi).
+- Yunus'un işleri Efe hesabından gönderildi; bu durum bağımsız Yunus GitHub katkısı olarak gösterilmiyor.
+- UI, cihaz üzerinde yerel örnek veri ile çalışır. Firebase ve Provider Step 3'e, OCR sonraki geliştirmeye bırakıldı.
+- Teslim PDF'sinde son kod commit'i, gerçek uygulama ekran görüntüleri ve Member Contributions yer alır.
+- Step 2.2 için SUCourse'a tek PDF yüklenir; çalışır kaynak kod public GitHub'da tutulur.
