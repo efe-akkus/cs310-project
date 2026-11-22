@@ -23,10 +23,10 @@ Dosyalar: `lib/screens/auth_screens.dart`, `lib/screens/profile_screen.dart`, `l
 
 Dosyalar: `lib/screens/groups_screen.dart`, `lib/screens/create_group_screen.dart`, `lib/screens/join_group_screen.dart`, `lib/screens/invite_sheet.dart`; üyeler görünümü: `lib/screens/group_members_view.dart`.
 
-- [ ] Grup oluştur; para birimini ve boş isim doğrulamasını kontrol et.
-- [ ] `TRIP-7K2M` ile katılımı, geçersiz kodu ve tekrar katılımı dene.
-- [ ] Davet kopyalama/sıfırlama ve üye listesini incele; favori grubun yukarı geldiğini kontrol et.
-- [ ] Gerçek düzenlemeleri kendi hesabından commit et; Flutter başlangıç kurulumunu da katkısında belirt.
+- [x] Grup oluştur; para birimini ve boş isim doğrulamasını kontrol et.
+- [x] `TRIP-7K2M` ile katılımı, geçersiz kodu ve tekrar katılımı dene.
+- [x] Davet kopyalama/sıfırlama ve üye listesini incele; favori grubun yukarı geldiğini kontrol et.
+- [x] Gerçek düzenlemeleri kendi hesabından commit et; Flutter başlangıç kurulumunu da katkısında belirt.
 
 ## Yunus Emre Yolal - 31294
 
