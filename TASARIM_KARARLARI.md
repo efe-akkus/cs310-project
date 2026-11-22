@@ -109,3 +109,9 @@ Bu dosya ekip içinde alınan kritik kararları, gerekçelerini ve henüz kesinl
 ## Son PDF düzenlemesi
 
 Step 2.1 PDF yalnızca ekranlar, paneller, gezinme akışı, kısa açıklamalar ve hata/onay örneklerini içerir (9 sayfa). Teknik geliştirme notları çıkarıldı. Örnek e-posta: efe.akkus@sabanciuniv.edu. İsimlerde köşeli parantezli baş harfler kaldırıldı; masraf formlarında yuvarlak tikli çoklu seçim göstergeleri kullanıldı.
+
+## Step 2.2 başlangıç uygulaması - 22 Kasım 2026
+
+Koyu tema, profil düzenlemesi ve harcamaya haritadan konum ekleme uygulanmıştır. Gruplarda favorileme de vardır. Veriler cihazda saklanan demo verileridir; gerçek Firebase hesap/üyelik güvenliği ve cihazlar arası senkronizasyon yoktur. OCR ertelenmiştir. Profil fotoğrafı bu sürümde HTTPS URL ile eklenir.
+
+Ekranlar üç üyeye sonraki inceleme/düzenleme için paylaştırıldı: Efe giriş/kayıt/profil/tema; Emir grup yönetimi ve davet; Yunus masraflar/bakiyeler/ödeme/harita. Bu dağılım tamamlanmış kişisel katkı olarak sunulmaz. Ayrıntılar `docs/STEP2_2_EKIP_GOREVLERI.md` içindedir.

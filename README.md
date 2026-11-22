@@ -2,9 +2,9 @@
 
 A Flutter application for managing shared group expenses and balances.
 
-**CS310 | Group 31 | Current stage: Step 2.1 wireframes**
+**CS310 | Group 31 | Current stage: Step 2.2 UI implementation**
 
-> Status: pre-submission design draft with 10 main screens, four drawn panels, and validation/confirmation examples (9 PDF pages). The TA has approved the scope change to accounts and shared groups, as confirmed by the group. Final PDF review is pending. A Flutter starter project is present in `cs310_project/`; SplitMate UI and Firebase integration are not implemented.
+> Status: Step 2.2 UI baseline implemented with local preview data; individual follow-up edits and final submission report remain pending. Firebase and OCR are not implemented.
 
 ## Team
 
@@ -40,7 +40,7 @@ Amounts are planned as integer minor units with deterministic remainder allocati
 | Cloud Firestore | Profiles, groups, memberships, expenses, shares and settlements |
 | Cloud Storage | Optional profile photos |
 
-Step 2.1 defines screens and navigation. Step 2.2 will implement UI with mock records, simulated authentication and working navigation. Real Firebase integration is planned for Step 3. SQLite is no longer the planned primary store. Group access and profile ownership must be enforced by backend rules when Firebase is implemented.
+Step 2.1 defines screens and navigation. Step 2.2 implements UI with mock records, simulated authentication and working navigation. Real Firebase integration is planned for Step 3. SQLite is no longer the planned primary store. Group access and profile ownership must be enforced by backend rules when Firebase is implemented.
 
 Unequal splits, expense categories, search/filtering, CSV export and dark mode remain optional. Currency conversion and bank transfers are outside the core scope.
 
@@ -62,7 +62,7 @@ Unequal splits, expense categories, search/filtering, CSV export and dark mode r
 - [ ] Each member contributes through their own account and explains their work at the TA meeting.
 - [ ] Submit Step 2.2 code and `CS310_Group31_Step2.2.pdf` by **20 November 2026, 23:59 (Europe/Istanbul)**.
 
-Run instructions and the actual Flutter version will be added when the runnable app is created. The repository contains documentation and a Flutter starter project.
+The tested toolchain and run instructions are in the app README linked below.
 
 ## Historical Step 1 documents
 
@@ -76,3 +76,15 @@ Efe prepared the Step 1 proposal sections, README and repository setup. Other me
 ## Repository
 
 [efe-akkus/cs310-project](https://github.com/efe-akkus/cs310-project)
+
+## Step 2.2 implementation
+
+See [run instructions and tested Flutter version](cs310_project/README.md) and [screen assignments](docs/STEP2_2_EKIP_GOREVLERI.md).
+
+```sh
+cd cs310_project
+flutter pub get
+flutter run
+```
+
+Light/dark UI, forms, expenses, balances, local persistence and map pin selection are implemented. Profiles currently use an optional HTTPS photo URL. Authentication and invitations remain device-local previews. The team reports a deadline extension to 22 November 2026, 23:59. Final member edits, screenshots and report must be refreshed before submission.
