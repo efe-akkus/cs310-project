@@ -16,7 +16,11 @@ void main() {
     Future<void> shot(String name) async {
       // Let real network image requests finish before capturing the screen.
       await tester.runAsync(
-        () => Future<void>.delayed(const Duration(seconds: 2)),
+        () => Future<void>.delayed(
+          Duration(
+            seconds: name == '03_groups' || name == '17_location_map' ? 10 : 2,
+          ),
+        ),
       );
       final messenger = find.byType(ScaffoldMessenger).first;
       if (messenger.evaluate().isNotEmpty) {
