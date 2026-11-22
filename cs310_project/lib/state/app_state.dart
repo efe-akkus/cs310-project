@@ -81,8 +81,13 @@ class AppState extends ChangeNotifier {
   List<ExpenseGroup> get myGroups {
     final result = groups.where((g) => g.members.containsKey(userId)).toList();
     result.sort((a, b) {
-      final v = (isFavorite(b.id) ? 1 : 0) - (isFavorite(a.id) ? 1 : 0);
-      return v != 0 ? v : a.name.compareTo(b.name);
+      // Favorite groups are shown first.
+      final aFavorite = isFavorite(a.id);
+      final bFavorite = isFavorite(b.id);
+      if (aFavorite && !bFavorite) return -1;
+      if (!aFavorite && bFavorite) return 1;
+      // Then A-Z. Lower case is used so "apartment" does not go after "Zoo".
+      return a.name.toLowerCase().compareTo(b.name.toLowerCase());
     });
     return result;
   }
@@ -160,9 +165,29 @@ class AppState extends ChangeNotifier {
     save();
   }
 
-  String inviteCode() =>
-      'SM-${List.generate(6, (_) => 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[Random.secure().nextInt(31)]).join()}';
+  // Letters and digits for invite codes. I, O, 0 and 1 are left out
+  // because they are easy to mix up when someone types the code.
+  static const inviteCodeChars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+
+  String inviteCode() {
+    final random = Random.secure();
+    String code;
+    do {
+      code = 'SM-';
+      for (int i = 0; i < 6; i++) {
+        // nextInt(length) gives 0..31, so every character can be picked.
+        code += inviteCodeChars[random.nextInt(inviteCodeChars.length)];
+      }
+      // Two groups must never share a code, so try again if it is taken.
+    } while (findCode(code) != null);
+    return code;
+  }
+
   ExpenseGroup createGroup(String name, String currency) {
+    // The form already checks this, but the state should not allow it either.
+    if (name.trim().isEmpty) {
+      throw StateError('Enter a group name.');
+    }
     final g = ExpenseGroup(
       id: newId(),
       name: name.trim(),
@@ -185,6 +210,16 @@ class AppState extends ChangeNotifier {
 
   void join(ExpenseGroup group) {
     group.members[userId] = name;
+    save();
+  }
+
+  // Only the owner can reset the code. The old code stops working,
+  // but people who already joined stay in the group.
+  void resetInviteCode(ExpenseGroup group) {
+    if (group.owner != userId) {
+      throw StateError('Only the group owner can reset the invite code.');
+    }
+    group.code = inviteCode();
     save();
   }
 

@@ -4,12 +4,46 @@ import '../models/ledger.dart';
 import '../state/app_state.dart';
 import '../widgets/common.dart';
 
-class InviteSheet extends StatelessWidget {
+class InviteSheet extends StatefulWidget {
   final ExpenseGroup group;
   const InviteSheet({super.key, required this.group});
   @override
+  State<InviteSheet> createState() => _InviteSheetState();
+}
+
+class _InviteSheetState extends State<InviteSheet> {
+  // A SnackBar opens behind this bottom sheet, so the user cannot see it.
+  // That is why the result of copy/reset is shown inside the sheet.
+  String? message;
+
+  Future<void> copyCode() async {
+    await Clipboard.setData(ClipboardData(text: widget.group.code));
+    if (!mounted) return;
+    setState(() => message = 'Invite code copied.');
+  }
+
+  Future<void> resetCode() async {
+    final ok = await confirm(
+      context,
+      'Reset invite code?',
+      'The old code will stop working. Existing members keep their access.',
+      action: 'Reset code',
+    );
+    if (!ok || !mounted) return;
+    try {
+      AppScope.of(context).resetInviteCode(widget.group);
+      setState(
+        () => message = 'New code created. The old code no longer works.',
+      );
+    } on StateError catch (e) {
+      setState(() => message = e.message);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     final app = AppScope.of(context);
+    final group = widget.group;
     if (group.owner != app.userId) {
       return const SheetBody(
         title: 'Invite members',
@@ -40,24 +74,23 @@ class InviteSheet extends StatelessWidget {
         PrimaryAction(
           'Copy invite code',
           icon: Icons.copy,
-          onPressed: () async {
-            await Clipboard.setData(ClipboardData(text: group.code));
-            if (context.mounted) toast(context, 'Invite code copied.');
-          },
+          onPressed: copyCode,
         ),
+        if (message != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 12),
+            child: Text(
+              message!,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.primary,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         const SizedBox(height: 12),
         TextButton(
-          onPressed: () async {
-            if (await confirm(
-              context,
-              'Reset invite code?',
-              'The old code will stop working. Existing members keep their access.',
-              action: 'Reset code',
-            )) {
-              group.code = app.inviteCode();
-              app.save();
-            }
-          },
+          onPressed: resetCode,
           child: const Text('Reset invite code'),
         ),
         const Text(
